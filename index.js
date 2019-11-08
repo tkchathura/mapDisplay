@@ -4,6 +4,14 @@ function initMap() {
     zoom: 14,
     center: myLatLng
   });
+  
+  {
+    "featureType": "all",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  }
 
   var marker = new google.maps.Marker({
     position: myLatLng,
