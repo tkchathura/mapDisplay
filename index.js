@@ -121,7 +121,7 @@ var styledMapType = new google.maps.StyledMapType(
       var markers = [
         {
           coords:{lat:-37.799656,lng:144.957940},
-          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          iconImage:'MetroTunnel.png',
           content:'<h1>Lynn MA</h1>'
         },
         {
