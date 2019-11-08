@@ -113,21 +113,74 @@ var styledMapType = new google.maps.StyledMapType(
         map.setMapTypeId('styled_map');
         
         
-          var labels = 'ABCD';
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
         
-          var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-          });
+      var markers = [
+        {
+          coords:{lat:-37.799656,lng:144.957940},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Lynn MA</h1>'
+        },
+        {
+          coords:{lat:-37.799656,lng:144.957940},
+        },
+        {
+          coords:{lat:-37.807463,lng:144.963154}
+        },
+        {
+          coords:{lat:-37.807463,lng:144.963154}
+        }
+      ];
+        
+        
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+        
+            function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
         });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
         
-        var locations=[
-               {lat: -37.807463, lng: 144.963154},
-               {lat: -37.799656, lng: 144.957940},
-               {lat: -37.801004, lng: 144.940624},
-               {lat: -37.815725, lng: 144.966912}
-         ]
+//           var labels = 'ABCD';
+        
+//           var markers = locations.map(function(location, i) {
+//           return new google.maps.Marker({
+//             position: location,
+//             label: labels[i % labels.length]
+//           });
+//         });
+        
+//         var locations=[
+//                {lat: -37.807463, lng: 144.963154},
+//                {lat: -37.799656, lng: 144.957940},
+//                {lat: -37.801004, lng: 144.940624},
+//                {lat: -37.815725, lng: 144.966912}
+//          ]
 
 //   var marker = new google.maps.Marker({
 //     position: myLatLng,
