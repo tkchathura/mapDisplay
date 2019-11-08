@@ -101,7 +101,7 @@ var styledMapType = new google.maps.StyledMapType(
   
           var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -37.797787, lng: 144.964162},
-          zoom: 11,
+          zoom: 15,
           mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
                     'styled_map']
