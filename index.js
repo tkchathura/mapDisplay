@@ -111,6 +111,23 @@ var styledMapType = new google.maps.StyledMapType(
         //Associate the styled map with the MapTypeId and set it to display.
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
+        
+        
+          var labels = '1234';
+        
+          var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: locationTrans,
+            label: labels[i % labels.length]
+          });
+        });
+        
+        var locationsTrans=[
+               {lat: -37.807463, lng: 144.963154},
+               {lat: -37.799656, lng: 144.957940},
+               {lat: -37.801004, lng: 144.940624},
+               {lat: -37.815725, lng: 144.966912}
+         ];
 
 //   var marker = new google.maps.Marker({
 //     position: myLatLng,
