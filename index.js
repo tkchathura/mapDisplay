@@ -120,18 +120,24 @@ var styledMapType = new google.maps.StyledMapType(
         
       var markers = [
         {
-          coords:{lat:-37.799656,lng:144.957940},
+          coords:{lat: -37.807463, lng: 144.963154},
           iconImage:'MetroTunnel.png',
-          content:'<h1>Lynn MA</h1>'
+          content:'<h4>New State Library Station</h4>'
         },
         {
-          coords:{lat:-37.799656,lng:144.957940},
+          coords:{lat: -37.799656, lng: 144.957940},
+          iconImage:'MetroTunnel.png',
+          content:'<h4>New Parkville Station</h4>'
         },
         {
-          coords:{lat:-37.807463,lng:144.963154}
+          coords:{lat: -37.801004, lng: 144.940624},
+          iconImage:'MetroTunnel.png',
+          content:'<h4>New North Melbourne</h4>'
         },
         {
-          coords:{lat:-37.807463,lng:144.963154}
+          coords:{lat: -37.815725, lng: 144.966912},
+          iconImage:'MetroTunnel.png',
+          content:'<h4>New Town Hall Station</h4>'
         }
       ];
         
