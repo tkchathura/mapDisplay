@@ -1,17 +1,30 @@
 function initMap() {
-  var myLatLng = {lat: -37.797787, lng:  144.964162};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: myLatLng
-  });
+
+  var styledMapType = new google.maps.StyledMapType(
+    [
+      {
+        "featureType": "all",
+        "elementType": "labels",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      }
+    ],
+    {name: 'Styled Map'});
   
-  {
-    "featureType": "all",
-    "elementType": "labels",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  }
+  
+     var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -37.797787, lng: 144.964162},
+          zoom: 14,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+        });
+  
+     map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+      }
 
   var marker = new google.maps.Marker({
     position: myLatLng,
