@@ -115,9 +115,9 @@ var styledMapType = new google.maps.StyledMapType(
         
           var labels = '1234';
         
-          var markers = locations.map(function(location, i) {
+          var markers = locationsTrans.map(function(location, i) {
           return new google.maps.Marker({
-            position: locationTrans,
+            position: location,
             label: labels[i % labels.length]
           });
         });
