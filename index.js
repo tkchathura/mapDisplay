@@ -113,7 +113,7 @@ var styledMapType = new google.maps.StyledMapType(
         map.setMapTypeId('styled_map');
         
         
-          var labels = 'ABCDE';
+          var labels = 'ABCD';
         
           var markers = locations.map(function(location, i) {
           return new google.maps.Marker({
@@ -127,7 +127,7 @@ var styledMapType = new google.maps.StyledMapType(
                {lat: -37.799656, lng: 144.957940},
                {lat: -37.801004, lng: 144.940624},
                {lat: -37.815725, lng: 144.966912}
-         ];
+         ]
 
 //   var marker = new google.maps.Marker({
 //     position: myLatLng,
