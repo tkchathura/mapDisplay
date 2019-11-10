@@ -210,7 +210,6 @@ function initMap() {
   });
   
   //Major Educational+Research Universities and Institutes
-   // let makerLabelTwo=markerLabelOne;
     const universityLocations=[
       {lat: -37.808457, lng: 144.964004},
       {lat: -37.796373, lng: 144.961531},
@@ -245,6 +244,44 @@ function initMap() {
       }
     });
      markerLabelTwo=0;
+  });
+  
+  
+  
+  //Other Educational and Training Facilities Institutes
+  const trainingLocations=[
+      {lat: -37.810819, lng: 144.958971},
+      {lat: -37.811654, lng: 144.95944},
+      {lat: -37.813353, lng: 144.95959},
+      {lat: -37.812963, lng: 144.960783},
+      {lat: -37.810171, lng: 144.968965}
+     ];
+
+    trainingLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'university.png',
+      scaledSize: new google.maps.Size(15, 15),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(25,0),
+    };
+
+    let markerLabelThree = markerLabelOne+universityLocations.length+index;
+    console.log(markerLabelThree);
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabelThree.toString(),
+        color: "#37474F",
+        fontSize: "16px",
+        //fontWeight: "bold"
+      }
+    });
+     markerLabelThree=0;
   });
   
   
