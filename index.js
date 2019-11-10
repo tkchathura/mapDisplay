@@ -173,7 +173,9 @@ function initMap() {
     //    }
 
     // var markerLatLng = new google.maps.LatLng(-37.807463, 144.963154);
-
+  
+  
+    const markerLabel=0;
     const metroTunnelLocations=[
       {lat: -37.807463, lng: 144.963154},
       {lat: -37.799656, lng: 144.957940},
@@ -191,7 +193,7 @@ function initMap() {
       labelOrigin:  new google.maps.Point(-5,5),
     };
 
-    const markerLabel = index+1;
+    markerLabel = index+1;
     const marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
