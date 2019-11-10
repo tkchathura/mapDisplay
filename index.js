@@ -209,12 +209,14 @@ function initMap() {
 
   });
   
-  //Educational Institutes
+  //Major Educational+Research Universities and Institutes
       const universityLocations=[
       {lat: -37.808457, lng: 144.964004},
       {lat: -37.796373, lng: 144.961531},
-      {lat: -37.783783, lng: 144.958383}
-      //{lat: -37.815725, lng: 144.966912}
+      {lat: -37.783783, lng: 144.958383},
+      {lat: -37.807932, lng: 144.977607},
+      {lat: -37.799608, lng: 144.9591},
+      {lat: -37.785692, lng: 144.958763}
     ];
 
     universityLocations.forEach((value, index) => {
