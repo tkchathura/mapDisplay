@@ -238,7 +238,7 @@ function initMap() {
       position: value,
       icon: markerIcon,
       label: {
-        text: markerLabel.toString(),
+        text: markerLabelTwo.toString(),
         color: "#37474F",
         fontSize: "16px",
         fontWeight: "bold"
