@@ -1,197 +1,209 @@
 function initMap() {
-var styledMapType = new google.maps.StyledMapType(
-        [
-        {
-          "elementType": "labels.icon",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "administrative.land_parcel",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "administrative.neighborhood",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "poi",
-          "elementType": "labels.text",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "poi.business",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "poi.medical",
-          "elementType": "labels.icon",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "poi.school",
-          "elementType": "labels.icon",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "road",
-          "elementType": "labels",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "road",
-          "elementType": "labels.icon",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "transit",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "water",
-          "elementType": "labels.text",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        }
-      ],
-{name: 'Styled Map'});
-  
-  
-          var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -37.802135, lng: 144.961877},
-          zoom: 16,
-          mapTypeControlOptions: {
-            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
-                    'styled_map']
+  const styledMapType = new google.maps.StyledMapType(
+    [
+      {
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
           }
-        });
-
-        //Associate the styled map with the MapTypeId and set it to display.
-        map.mapTypes.set('styled_map', styledMapType);
-        map.setMapTypeId('styled_map');
-        
-        
-      google.maps.event.addListener(map, 'click', function(event){
-        // Add marker
-        addMarker({coords:event.latLng});
-      });
-        
-      var markers = [
-        {
-          coords:{lat: -37.807463, lng: 144.963154},
-          iconImage:'MetroTunnel.png',
-          content:'<h4>New State Library Station</h4>'
-        },
-        {
-          coords:{lat: -37.799656, lng: 144.957940},
-          iconImage:'MetroTunnel.png',
-          content:'<h4>New Parkville Station</h4>'
-        },
-        {
-          coords:{lat: -37.801004, lng: 144.940624},
-          iconImage:'MetroTunnel.png',
-          content:'<h4>New North Melbourne</h4>'
-        },
-        {
-          coords:{lat: -37.815725, lng: 144.966912},
-          iconImage:'MetroTunnel.png',
-          content:'<h4>New Town Hall Station</h4>'
-        }
-      ];
-        
-        
-      for(var i = 0;i < markers.length;i++){
-        // Add marker
-        addMarker(markers[i]);
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.neighborhood",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.business",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.medical",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.school",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
       }
-        
-            function addMarker(props){
-        var marker = new google.maps.Marker({
-          position:props.coords,
-          map:map,
-          //icon:props.iconImage
-        });
+    ],
+    {name: 'Styled Map'});
 
-        // Check for customicon
-        if(props.iconImage){
-          // Set icon image
-          marker.setIcon(props.iconImage);
-        }
 
-        // Check content
-        if(props.content){
-          var infoWindow = new google.maps.InfoWindow({
-            content:props.content
-          });
-
-          marker.addListener('click', function(){
-            infoWindow.open(map, marker);
-          });
-        }
+    const map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -37.802135, lng: 144.961877},
+      zoom: 15,
+      mapTypeControlOptions: {
+        mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+        'styled_map']
       }
-        
-//           var labels = 'ABCD';
-        
-//           var markers = locations.map(function(location, i) {
-//           return new google.maps.Marker({
-//             position: location,
-//             label: labels[i % labels.length]
-//           });
-//         });
-        
-//         var locations=[
-//                {lat: -37.807463, lng: 144.963154},
-//                {lat: -37.799656, lng: 144.957940},
-//                {lat: -37.801004, lng: 144.940624},
-//                {lat: -37.815725, lng: 144.966912}
-//          ]
+    });
 
-//   var marker = new google.maps.Marker({
-//     position: myLatLng,
-//     map: map,
-//     label:'1',
-//     title: 'Hello World!'
-//   });
+    //Associate the styled map with the MapTypeId and set it to display.
+    map.mapTypes.set('styled_map', styledMapType);
+    map.setMapTypeId('styled_map');
+
+
+    //    google.maps.event.addListener(map, 'click', function(event){
+    //      // Add marker
+    //      addMarker({coords:event.latLng});
+    //    });
+    //
+    //    var markers = [
+    //      {
+    //        coords:{lat: -37.807463, lng: 144.963154},
+    //        iconImage:'MetroTunnel.png',
+    //        content:'<h4>New State Library Station</h4>'
+    //      },
+    //      {
+    //        coords:{lat: -37.799656, lng: 144.957940},
+    //        iconImage:'MetroTunnel.png',
+    //        content:'<h4>New Parkville Station</h4>'
+    //      },
+    //      {
+    //        coords:{lat: -37.801004, lng: 144.940624},
+    //        iconImage:'MetroTunnel.png',
+    //        content:'<h4>New North Melbourne</h4>'
+    //      },
+    //      {
+    //        coords:{lat: -37.815725, lng: 144.966912},
+    //        iconImage:'MetroTunnel.png',
+    //        content:'<h4>New Town Hall Station</h4>'
+    //      }
+    //    ];
+    //
+    //
+    //    for(var i = 0;i < markers.length;i++){
+    //      // Add marker
+    //      addMarker(markers[i]);
+    //    }
+    //
+    //    function addMarker(props){
+    //      var marker = new google.maps.Marker({
+    //        position:props.coords,
+    //        map:map,
+    //        //icon:props.iconImage
+    //      });
+    //
+    //      // Check for customicon
+    //      if(props.iconImage){
+    //        // Set icon image
+    //        marker.setIcon(props.iconImage);
+    //      }
+    //
+    //      // Check content
+    //      if(props.content){
+    //        var infoWindow = new google.maps.InfoWindow({
+    //          content:props.content
+    //        });
+    //
+    //        marker.addListener('click', function(){
+    //          infoWindow.open(map, marker);
+    //        });
+    //      }
+    //    }
+
+    // var markerLatLng = new google.maps.LatLng(-37.807463, 144.963154);
+
+    const metroTunnelLocations=[
+      {lat: -37.807463, lng: 144.963154},
+      {lat: -37.799656, lng: 144.957940},
+      {lat: -37.801004, lng: 144.940624},
+      {lat: -37.815725, lng: 144.966912}
+    ];
+
+    metroTunnelLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'MetroTunnel.png',
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(-5,5),
+    };
+
+    const markerLabel = index+1;
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabel.toString(),
+        color: "#eb3a44",
+        fontSize: "16px",
+        fontWeight: "bold"
+      }
+    });
+
+  });
 }
