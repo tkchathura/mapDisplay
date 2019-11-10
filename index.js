@@ -227,7 +227,7 @@ function initMap() {
       scaledSize: new google.maps.Size(20, 20),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0,30),
-      labelOrigin:  new google.maps.Point(25,-25),
+      labelOrigin:  new google.maps.Point(25,-10),
     };
 
     let markerLabelTwo = markerLabelOne+index;
