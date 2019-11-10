@@ -208,4 +208,40 @@ function initMap() {
     });
 
   });
+  
+  //Educational Institutes
+      const universityLocations=[
+      {lat: -37.808457, lng: 144.964004},
+      {lat: -37.796373, lng: 144.961531},
+      {lat: -37.783783, lng: 144.958383}
+      //{lat: -37.815725, lng: 144.966912}
+    ];
+
+    universityLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'university.png',
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(-5,5),
+    };
+
+    markerLabel = markerLabel+index;
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabel.toString(),
+        color: "#37474F",
+        fontSize: "16px",
+        fontWeight: "bold"
+      }
+    });
+
+  });
+  
+  
 }
