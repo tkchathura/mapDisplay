@@ -175,7 +175,7 @@ function initMap() {
     // var markerLatLng = new google.maps.LatLng(-37.807463, 144.963154);
   
   
-    let markerLabel=0;
+    let markerLabelOne=0;
     const metroTunnelLocations=[
       {lat: -37.807463, lng: 144.963154},
       {lat: -37.799656, lng: 144.957940},
@@ -193,14 +193,14 @@ function initMap() {
       labelOrigin:  new google.maps.Point(-5,5),
     };
 
-    markerLabel = index+1;
+    markerLabelOne = index+1;
     const marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
       position: value,
       icon: markerIcon,
       label: {
-        text: markerLabel.toString(),
+        text: markerLabelOne.toString(),
         color: "#eb3a44",
         fontSize: "16px",
         fontWeight: "bold"
@@ -210,7 +210,8 @@ function initMap() {
   });
   
   //Major Educational+Research Universities and Institutes
-      const universityLocations=[
+   // let makerLabelTwo=markerLabelOne;
+    const universityLocations=[
       {lat: -37.808457, lng: 144.964004},
       {lat: -37.796373, lng: 144.961531},
       {lat: -37.783783, lng: 144.958383},
@@ -229,7 +230,8 @@ function initMap() {
       labelOrigin:  new google.maps.Point(-5,5),
     };
 
-    markerLabel = markerLabel+index;
+    let markerLabelTwo = markerLabelOne+index;
+    console.log(markerLabelTwo);
     const marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
@@ -242,7 +244,7 @@ function initMap() {
         fontWeight: "bold"
       }
     });
-
+     markerLabelTwo=0;
   });
   
   
