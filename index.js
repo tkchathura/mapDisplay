@@ -510,7 +510,7 @@ function initMap() {
       url:'biomedical.png',
       scaledSize: new google.maps.Size(20, 20),
       origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(0,30),
+      anchor: new google.maps.Point(0,5),
       labelOrigin:  new google.maps.Point(25,25),
     };
 
