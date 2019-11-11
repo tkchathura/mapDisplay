@@ -175,6 +175,7 @@ function initMap() {
     // var markerLatLng = new google.maps.LatLng(-37.807463, 144.963154);
   
   
+    // RMIT Development Site
     var RMITco = [
           {lat: -37.806699, lng: 144.964406},
           {lat: -37.804791, lng: 144.964734},
@@ -193,8 +194,11 @@ function initMap() {
           fillOpacity: 0.35
         });
         RMITsite.setMap(map);
+	
+	
+	
   
-  
+  // Metro Tunnel Locations
     let markerLabelOne=0;
     const metroTunnelLocations=[
       {lat: -37.807463, lng: 144.963154},
@@ -523,6 +527,44 @@ function initMap() {
       }
     });
      markerLabelNine=0;
+  });
+	
+
+	
+   //City Loop
+    const cityLoopLocations=[
+      {lat: -37.810367, lng: 144.962845},         //Melbourne Central
+      {lat: -37.818673, lng: 144.952464},         //Southern Cross
+      {lat: -37.812235, lng: 144.956092},         //Flagstaff
+      {lat: -37.806801, lng: 144.942366},         //North Melbourne
+      {lat: -37.781211, lng: 144.952295}         //Royal Park Station
+     ];
+
+    cityLoopLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'cityLoop.png',
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(25,0),
+    };
+
+    let markerLabelTen = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+hospitalLocations.length+justiceLocations.length+justiceLocations.length+openLocations.length+publicLocations.length+index;
+    console.log(markerLabelTen);
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabelTen.toString(),
+        color: "#37474F",
+        fontSize: "10px",
+        //fontWeight: "bold"
+      }
+    });
+     markerLabelTen=0;
   });
   
   
