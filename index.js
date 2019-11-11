@@ -579,7 +579,7 @@ function initMap() {
       scaledSize: new google.maps.Size(20, 20),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0,30),
-      labelOrigin:  new google.maps.Point(25,0),
+      labelOrigin:  new google.maps.Point(25,25),
     };
 
     let markerLabelEight = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+hospitalLocations.length+justiceLocations.length+justiceLocations.length+index;
