@@ -337,7 +337,7 @@ function initMap() {
       label: {
         text: markerLabelOne.toString(),
         color: "#eb3a44",
-        fontSize: "12px",
+        fontSize: "10px",
         fontWeight: "bold"
       }
     });
@@ -374,7 +374,7 @@ function initMap() {
       label: {
         text: markerLabelTwo.toString(),
         color: "#37474F",
-        fontSize: "12px",
+        fontSize: "10px",
         fontWeight: "bold"
       }
     });
@@ -413,7 +413,7 @@ function initMap() {
         text: markerLabelThree.toString(),
         color: "#37474F",
         fontSize: "10px",
-        //fontWeight: "bold"
+        fontWeight: "bold"
       }
     });
      markerLabelThree=0;
@@ -447,7 +447,7 @@ function initMap() {
       label: {
         text: markerLabelFour.toString(),
         color: "#37474F",
-        fontSize: "12px",
+        fontSize: "10px",
         fontWeight: "bold"
       }
     });
@@ -485,7 +485,7 @@ function initMap() {
       label: {
         text: markerLabelFive.toString(),
         color: "#37474F",
-        fontSize: "12px",
+        fontSize: "10px",
         fontWeight: "bold"
       }
     });
@@ -525,7 +525,7 @@ function initMap() {
         text: markerLabelSix.toString(),
         color: "#37474F",
         fontSize: "10px",
-        //fontWeight: "bold"
+       fontWeight: "bold"
       }
     });
      markerLabelSix=0;
@@ -558,7 +558,7 @@ function initMap() {
         text: markerLabelSeven.toString(),
         color: "#37474F",
         fontSize: "10px",
-        //fontWeight: "bold"
+        fontWeight: "bold"
       }
     });
      markerLabelSeven=0;
@@ -593,7 +593,7 @@ function initMap() {
         text: markerLabelEight.toString(),
         color: "#37474F",
         fontSize: "10px",
-        //fontWeight: "bold"
+       fontWeight: "bold"
       }
     });
      markerLabelEight=0;
@@ -634,7 +634,7 @@ function initMap() {
         text: markerLabelNine.toString(),
         color: "#37474F",
         fontSize: "10px",
-        //fontWeight: "bold"
+      fontWeight: "bold"
       }
     });
      markerLabelNine=0;
@@ -672,7 +672,7 @@ function initMap() {
         text: markerLabelTen.toString(),
         color: "#37474F",
         fontSize: "10px",
-        //fontWeight: "bold"
+       fontWeight: "bold"
       }
     });
      markerLabelTen=0;
