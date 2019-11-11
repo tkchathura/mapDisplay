@@ -299,7 +299,7 @@ function initMap() {
       scaledSize: new google.maps.Size(20, 20),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0,30),
-      labelOrigin:  new google.maps.Point(25,0),
+      labelOrigin:  new google.maps.Point(25,15),
     };
 
     let markerLabelFour = markerLabelOne+universityLocations.length+trainingLocations.length+index;
@@ -341,7 +341,7 @@ function initMap() {
     };
 
     let markerLabelFive = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+index;
-    console.log(markerLabelFive);
+    //console.log(markerLabelFive);
     const marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
@@ -355,6 +355,45 @@ function initMap() {
       }
     });
      markerLabelFive=0;
+  });
+  
+  //Biomedical Research Facilities
+    const biomedicalLocations=[
+      {lat: -37.779327, lng: 144.945357},       // CSL Corporate
+      {lat: -37.80262, lng: 144.957322},        // CSL Headquarters
+      {lat: -37.793616, lng: 144.949123},       //Murdoch Children's
+      {lat: -37.79832, lng: 144.95845},        //The Florey
+      {lat: -37.797529, lng: 144.953968},       //Bio21
+      {lat: -37.800047, lng: 144.957931},       //Peter Dohetry
+      {lat: -37.798093, lng: 144.956063},        //Walter and Eliza
+      {lat: -37.800101, lng: 144.956538}         //Peter Mac
+     ];
+
+    biomedicalLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'biomedical.png',
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(25,0),
+    };
+
+    let markerLabelSix = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+hospitalLocations.length+index;
+    console.log(markerLabelSix);
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabelSix.toString(),
+        color: "#37474F",
+        fontSize: "16px",
+        fontWeight: "bold"
+      }
+    });
+     markerLabelSix=0;
   });
   
   
