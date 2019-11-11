@@ -175,6 +175,26 @@ function initMap() {
     // var markerLatLng = new google.maps.LatLng(-37.807463, 144.963154);
   
   
+    var RMITco = [
+          {lat: -37.806699, lng: 144.964406},
+          {lat: -37.804791, lng: 144.964734},
+          {lat: -37.804969, lng: 144.966075},
+          {lat: -37.806838, lng: 144.965758},
+	        {lat: -37.806699, lng: 144.964406}
+        ];
+
+	 
+        var RMITsite = new google.maps.Polygon({
+          paths: RMITco,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        RMITsite.setMap(map);
+  
+  
     let markerLabelOne=0;
     const metroTunnelLocations=[
       {lat: -37.807463, lng: 144.963154},
