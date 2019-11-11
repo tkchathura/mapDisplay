@@ -264,7 +264,7 @@ function initMap() {
       scaledSize: new google.maps.Size(15, 15),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0,30),
-      labelOrigin:  new google.maps.Point(25,0),
+      labelOrigin:  new google.maps.Point(20,0),
     };
 
     let markerLabelThree = markerLabelOne+universityLocations.length+index;
@@ -277,7 +277,7 @@ function initMap() {
       label: {
         text: markerLabelThree.toString(),
         color: "#37474F",
-        fontSize: "16px",
+        fontSize: "14px",
         //fontWeight: "bold"
       }
     });
