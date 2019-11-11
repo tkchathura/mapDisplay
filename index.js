@@ -299,10 +299,10 @@ function initMap() {
 	 
         var cityNorthBoundary = new google.maps.Polygon({
           paths: cityNorth,
-          strokeColor: '#FF0000',
-          strokeOpacity: 0.8,
+          strokeColor: '#3F4905',
+          strokeOpacity: 0.9,
           strokeWeight: 2,
-          fillColor: '#FF0000',
+          fillColor: '#3A6FD9',
           fillOpacity: 0.05
         });
         cityNorthBoundary.setMap(map);
