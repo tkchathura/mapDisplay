@@ -380,7 +380,7 @@ function initMap() {
     };
 
     let markerLabelSix = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+hospitalLocations.length+index;
-    console.log(markerLabelSix);
+   // console.log(markerLabelSix);
     const marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
@@ -394,6 +394,115 @@ function initMap() {
       }
     });
      markerLabelSix=0;
+  });
+  
+  
+  //Justice Facilities
+    const justiceLocations=[
+      {lat: -37.776852, lng: 144.945352}         //Parkville Justice Centre
+     ];
+
+    justiceLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'justice.png',
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(25,0),
+    };
+
+    let markerLabelSeven = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+hospitalLocations.length+justiceLocations.length+index;
+    console.log(markerLabelSeven);
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabelSeven.toString(),
+        color: "#37474F",
+        fontSize: "10px",
+        //fontWeight: "bold"
+      }
+    });
+     markerLabelSeven=0;
+  });
+  
+  
+    //Open Spaces
+    const openLocations=[
+      {lat: -37.790904, lng: 144.953196},         //Royal Park
+      {lat: -37.805494, lng: 144.970588},         //Carlton Gardens
+      {lat: -37.810931, lng: 144.954829}         //Flagstaff
+     ];
+
+    openLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'open.png',
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(25,0),
+    };
+
+    let markerLabelEight = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+hospitalLocations.length+justiceLocations.length+justiceLocations.length+index;
+    console.log(markerLabelEight);
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabelEight.toString(),
+        color: "#37474F",
+        fontSize: "10px",
+        //fontWeight: "bold"
+      }
+    });
+     markerLabelEight=0;
+  });
+  
+  
+  
+      //Public Locations
+    const publicLocations=[
+      {lat: -37.806802, lng: 144.959381},         //Queen Victoria Market
+      {lat: -37.809919, lng: 144.965832},         //State Library
+   //   {lat: -37.801198, lng: 144.957179},         //Heymarket
+      {lat: -37.784513, lng: 144.951587},         //Zoo
+   //   {lat: -37.807836, lng: 144.965319},         //Old Melbourne Goal
+      {lat: -37.803313, lng: 144.971572},         //Melbourne Museum
+  //    {lat: -37.807178, lng: 144.963233},         //Melbourne City Baths
+      {lat: -37.804885, lng: 144.971767}         //Royal Exhibition Building
+     ];
+
+    publicLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'public.png',
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(25,0),
+    };
+
+    let markerLabelNine = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+hospitalLocations.length+justiceLocations.length+justiceLocations.length+openLocations.length+index;
+    console.log(markerLabelNine);
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabelNine.toString(),
+        color: "#37474F",
+        fontSize: "10px",
+        //fontWeight: "bold"
+      }
+    });
+     markerLabelNine=0;
   });
   
   
