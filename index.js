@@ -534,7 +534,7 @@ function initMap() {
   
   //Justice Facilities
     const justiceLocations=[
-      {lat: -37.776852, lng: 144.945352}         //Parkville Justice Centre
+      {lat: -37.777135, lng: 144.944750}         //Parkville Justice Centre
      ];
 
     justiceLocations.forEach((value, index) => {
