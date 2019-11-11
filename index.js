@@ -230,7 +230,7 @@ function initMap() {
     };
 
     let markerLabelTwo = markerLabelOne+index;
-    console.log(markerLabelTwo);
+  //  console.log(markerLabelTwo);
     const marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
@@ -268,7 +268,7 @@ function initMap() {
     };
 
     let markerLabelThree = markerLabelOne+universityLocations.length+index;
-    console.log(markerLabelThree);
+ //   console.log(markerLabelThree);
     const marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
@@ -299,11 +299,11 @@ function initMap() {
       scaledSize: new google.maps.Size(20, 20),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0,30),
-      labelOrigin:  new google.maps.Point(20,0),
+      labelOrigin:  new google.maps.Point(25,0),
     };
 
     let markerLabelFour = markerLabelOne+universityLocations.length+trainingLocations.length+index;
-    console.log(markerLabelFour);
+  //  console.log(markerLabelFour);
     const marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
@@ -318,6 +318,47 @@ function initMap() {
     });
      markerLabelFour=0;
   });
+  
+  
+     //Hospital Facilities
+    const hospitalLocations=[
+      {lat: -37.807424, lng: 144.974667},       // St. Vincent
+      {lat: -37.80904, lng: 144.976213},        // Royal Victorian Eye and Ear 
+      {lat: -37.799647, lng: 144.964521},       //Royal Dental
+      {lat: -37.79937, lng: 144.956542},        //Royal MElbourne
+      {lat: -37.798738, lng: 144.954868},       //Royal Women's
+      {lat: -37.795028, lng: 144.949945}        //Royal Children's
+     ];
+
+    hospitalLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'hospital.png',
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(25,0),
+    };
+
+    let markerLabelFive = markerLabelOne+universityLocations.length+trainingLocations.length+innovationLocations.length+index;
+    console.log(markerLabelFive);
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabelFive.toString(),
+        color: "#37474F",
+        fontSize: "16px",
+        fontWeight: "bold"
+      }
+    });
+     markerLabelFive=0;
+  });
+  
+  
+  
   
   
 }
