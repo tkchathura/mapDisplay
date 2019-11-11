@@ -302,8 +302,8 @@ function initMap() {
           strokeColor: '#3F4905',
           strokeOpacity: 0.9,
           strokeWeight: 2,
-          //fillColor: '#3A6FD9',
-          //fillOpacity: 0.05
+          fillColor: '#3A6FD9',
+          fillOpacity: 0.01
         });
         cityNorthBoundary.setMap(map);
 	
