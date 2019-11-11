@@ -389,7 +389,7 @@ function initMap() {
       label: {
         text: markerLabelSix.toString(),
         color: "#37474F",
-        fontSize: "16px",
+        fontSize: "14px",
         fontWeight: "bold"
       }
     });
