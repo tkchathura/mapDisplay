@@ -202,7 +202,7 @@ function initMap() {
       label: {
         text: markerLabelOne.toString(),
         color: "#eb3a44",
-        fontSize: "16px",
+        fontSize: "12px",
         fontWeight: "bold"
       }
     });
@@ -239,7 +239,7 @@ function initMap() {
       label: {
         text: markerLabelTwo.toString(),
         color: "#37474F",
-        fontSize: "16px",
+        fontSize: "12px",
         fontWeight: "bold"
       }
     });
@@ -277,7 +277,7 @@ function initMap() {
       label: {
         text: markerLabelThree.toString(),
         color: "#37474F",
-        fontSize: "14px",
+        fontSize: "10px",
         //fontWeight: "bold"
       }
     });
@@ -312,7 +312,7 @@ function initMap() {
       label: {
         text: markerLabelFour.toString(),
         color: "#37474F",
-        fontSize: "16px",
+        fontSize: "12px",
         fontWeight: "bold"
       }
     });
@@ -350,7 +350,7 @@ function initMap() {
       label: {
         text: markerLabelFive.toString(),
         color: "#37474F",
-        fontSize: "16px",
+        fontSize: "12px",
         fontWeight: "bold"
       }
     });
@@ -389,8 +389,8 @@ function initMap() {
       label: {
         text: markerLabelSix.toString(),
         color: "#37474F",
-        fontSize: "14px",
-        fontWeight: "bold"
+        fontSize: "10px",
+        //fontWeight: "bold"
       }
     });
      markerLabelSix=0;
