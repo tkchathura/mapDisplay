@@ -101,7 +101,7 @@ function initMap() {
 
     const map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -37.802135, lng: 144.961877},
-      zoom: 15,
+      zoom: 15.5,
       mapTypeControlOptions: {
         mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
         'styled_map']
