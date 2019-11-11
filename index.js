@@ -295,7 +295,7 @@ function initMap() {
     innovationLocations.forEach((value, index) => {
     const markerIcon = {
       //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
-      url:'https://img.icons8.com/ios-filled/20/000000/greentech.png',
+      url:'innovation.png',
       scaledSize: new google.maps.Size(20, 20),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0,30),
