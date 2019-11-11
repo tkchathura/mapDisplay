@@ -215,8 +215,8 @@ function initMap() {
       {lat: -37.796373, lng: 144.961531},
       {lat: -37.783783, lng: 144.958383},
       {lat: -37.807932, lng: 144.977607},
-      {lat: -37.799608, lng: 144.9591},
-      {lat: -37.785692, lng: 144.958763}
+      {lat: -37.799608, lng: 144.9591}
+      //{lat: -37.785692, lng: 144.958763}
     ];
 
     universityLocations.forEach((value, index) => {
@@ -282,6 +282,41 @@ function initMap() {
       }
     });
      markerLabelThree=0;
+  });
+  
+  
+  
+    //Innovation Centres
+  const innovationLocations=[
+      {lat: -37.785674, lng: 144.958951},
+      {lat: -37.800066, lng: 144.964752}
+     ];
+
+    innovationLocations.forEach((value, index) => {
+    const markerIcon = {
+      //url: 'http://image.flaticon.com/icons/svg/252/252025.svg',
+      url:'https://img.icons8.com/ios-filled/20/000000/greentech.png'
+      scaledSize: new google.maps.Size(20, 20),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0,30),
+      labelOrigin:  new google.maps.Point(20,0),
+    };
+
+    let markerLabelFour = markerLabelOne+universityLocations.length+trainingLocations.length+index;
+    console.log(markerLabelFour);
+    const marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: value,
+      icon: markerIcon,
+      label: {
+        text: markerLabelFour.toString(),
+        color: "#37474F",
+        fontSize: "16px",
+        fontWeight: "bold"
+      }
+    });
+     markerLabelFour=0;
   });
   
   
